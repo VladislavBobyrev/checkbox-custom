@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+a:active, a:hover {
+  outline: 0;
+}
+
+ul,
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:focus {
+  outline: 0;
+}
+
+img,
+audio,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+audio,
+canvas,
+iframe,
+video,
+img,
+svg {
+  vertical-align: middle;
+}
+
+iframe {
+  border: 0;
+}
+
+textarea {
+  resize: none;
+  /*remove the resize handle on the bottom right*/
+  overflow: auto;
+  vertical-align: top;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+}
+
+input,
+textarea,
+select,
+button {
+  outline: none;
+  border: none;
+  font-size: 100%;
+  margin: 0;
+}
+
+button,
+input {
+  line-height: normal;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+  text-align: left;
+}
+
+html[data-theme=dark] {
+  --color-basic:#0c0c0c;
+  --color-basic-75:#3c44a3;
+  --color-primary:#383838;
+  --color-primary-75:#393939BF;
+  --color-secondary:#EBEBEB;
+  --color-secondary-50:#4a556d80;
+  --color-accent:#37B3EC;
+  --bg-basic:#0c0c0c;
+  --bg-basic-75:#3c44a3;
+  --bg-primary:#383838;
+  --bg-primary-75:#393939BF;
+  --bg-secondary:#EBEBEB;
+  --bg-secondary-50:#4a556d80;
+  --bg-accent:#37B3EC;
+  --neutral:#c4c4c4;
+  --neutral-50:#c4c4c40f;
+  --select-primary:#FFFFFF;
+  --linear-gradient: linear-gradient(146.22deg, #24a6e4 6.48%, #2a337d 155.29%);
+  --placeholder:#f4f4f4bf;
+  --box-shadow:0px 4px 15px #0000001a;
+}
+
+html {
+  display: flex;
+  min-height: -webkit-fill-available;
+  overflow: hidden;
+}
+
+html.color-theme-in-transition,
+html.color-theme-in-transition * {
+  transition: 200ms;
+  transition-delay: 0;
+}
+
+html[data-theme=dark] .blend {
+  filter: invert(100%) hue-rotate(180deg);
+  mix-blend-mode: screen;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.5;
+  color: var(--color-secondary);
+  background: var(--bg-basic-75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-checkbox {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.custom-checkbox input[type=checkbox] {
+  display: none;
+}
+.custom-checkbox input[type=checkbox]:checked ~ label {
+  transform: rotate(45deg);
+  width: 2rem;
+  border: 3px solid #4ee84e;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-radius: 0;
+}
+.custom-checkbox label {
+  width: 100%;
+  height: 100%;
+  border: 3px solid rgba(155, 164, 155, 0.8862745098);
+  border-radius: 3px;
+  transition: width 0.3s, transform 0.3s, border-color 0.3s, border-radius 0.3s;
+}
